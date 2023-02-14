@@ -1,0 +1,105 @@
+select *
+from actor;
+
+select FIRST_NAME, LAST_NAME
+from actor
+where LAST_NAME = 'Wahlberg'
+
+--QUESTION ONE ANSWER == TWO
+
+select *
+from PAYMENT;
+
+select COUNT(AMOUNT)
+from payment
+where AMOUNT between 3.99 and 5.99
+
+--QUESTION TWO ANSWER == 4,794
+
+select *
+from inventory
+
+select FILM_ID, COUNT(FILM_ID) AS VALUE_OCCURRENCE  
+from INVENTORY
+GROUP BY FILM_ID
+ORDER BY VALUE_OCCURRENCE  desc
+  
+ --QUESTION THREE ANSWER == THE QUESTION ASKS FOR "THE FILM" THE STORE HAS THE MOST OF BUT I FOUND 72 FILMS WHICH EACH HAD 8 ITERATIONS ALL TYING FOR FIRST PLACE
+select *
+from CUSTOMER
+  
+select LAST_NAME 
+from CUSTOMER
+where LAST_NAME = 'William'
+
+--QUESTION FOUR ANSWER == IT APPEARS TO ME THAT NONE OF THE CUSTOMERS HAVE THE LAST NAME OF WILLIAM
+
+select * 
+from RENTAL
+
+select STAFF_ID, COUNT(STAFF_ID) AS VALUE_OCCURRENCE  
+from RENTAL
+GROUP BY STAFF_ID
+ORDER BY VALUE_OCCURRENCE desc
+  
+  
+ --QUESTION FIVE ANSWER == MY BOY MIKE HILLYER! STAFF_ID 1 WOOO! WE KNEW YOU COULD DO IT MIKE! 
+  
+select * 
+from address
+select DISTRICT, COUNT(DISTRICT) AS VALUE_OCCURRENCE 
+from ADDRESS
+GROUP BY DISTRICT
+ORDER BY VALUE_OCCURRENCE e desc
+  
+--QUESTION SIX ANSWER == 378
+  
+select * 
+from FILM_ACTOR
+
+select COUNT(ACTOR_ID), FILM_ID 
+FROM FILM_ACTOR 
+group by FILM_ID 
+order by count desc;
+
+--QUESTION SEVEN ANSWER == LAMBS CINCINATTI
+
+select *
+from CUSTOMER
+
+select LAST_NAME
+from CUSTOMER
+where LAST_NAME like '%es'
+
+--QUESTION EIGHT ANSWER == 21 (BLACKJACK!)
+
+select *
+from PAYMENT
+
+select COUNT(AMOUNT), AMOUNT 
+from PAYMENT 
+where CUSTOMER_ID > 380 and CUSTOMER_ID  < 430 
+group by AMOUNT 
+order by count desc;
+
+--QUESTION NINE ANSWER == THREE
+
+select * 
+from FILM
+
+select COUNT(FILM_ID), RATING 
+from FILM 
+group by RATING 
+order by count desc;
+
+--QUESTION 10 ANSWER == FIVE
+
+  
+  
+ 
+ 
+  
+  
+
+
+  
